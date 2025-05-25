@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Reference the published parent POM hosted on GitHub Packages -->
+    <parent>
+        <groupId>com.selimhorri</groupId>
+        <artifactId>ecommerce-parent</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>cloud-config</artifactId>
+    <name>cloud-config</name>
+    <description>Spring Cloud Config Server</description>
+    <packaging>jar</packaging>
+
+    <!-- Required to resolve the parent from GitHub Packages -->
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/EcommerceDevops/ecommerce-parent</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!-- Eureka client to register the config server -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <!-- Spring Cloud Config Server -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-server</artifactId>
+        </dependency>
+
+        <!-- Base Spring Cloud starter -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Spring Boot plugin to build executable JAR -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+
+        <!-- Custom JAR name -->
+        <finalName>${project.artifactId}-v${project.version}</finalName>
+    </build>
+
+</project>
