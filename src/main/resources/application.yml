@@ -13,6 +13,7 @@ spring:
         git:
           uri: https://github.com/EcommerceDevops/cloud-config-server
           clone-on-start: true
+          default-label: main
 
 
   
