@@ -14,6 +14,7 @@
     </parent>
 
     <artifactId>cloud-config</artifactId>
+    <version>1.0.0</version>
     <name>cloud-config</name>
     <description>Spring Cloud Config Server</description>
     <packaging>jar</packaging>

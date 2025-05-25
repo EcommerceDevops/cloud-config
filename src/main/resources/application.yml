@@ -11,7 +11,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/kira0826/cloud-config-server
+          uri: https://github.com/EcommerceDevops/cloud-config-server
           clone-on-start: true
 
 
