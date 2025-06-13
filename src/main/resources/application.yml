@@ -15,8 +15,6 @@ spring:
           clone-on-start: true
           default-label: main
 
-
-  
 resilience4j:
   circuitbreaker:
     instances:
